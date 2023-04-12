@@ -1,0 +1,18 @@
+<h1>Articles#index</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @articles.each do |article| %>
+    <tr>
+      <td><a href="/articles/ <%= article.id %>"><%= article.title %></td>
+      <td><%= article.body %></td>
+    </tr>
+  <% end %>
+</table>
+
+<hr>
+<%= link_to "Create a new Article", new_article_path %>
